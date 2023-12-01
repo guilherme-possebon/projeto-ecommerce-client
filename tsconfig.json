@@ -29,7 +29,9 @@
     "src/pages/api/auth/[...nextauth].js",
     "src/api/auth/[auth0]/route.js",
     "next.config.js",
-    "postcss.config.js",
+    "postcss.config.cjs",
+    "panda.config.ts",
+    "styled-system",
     "src/Components/ProductForm.tsx"
   ],
   "exclude": ["node_modules"]
