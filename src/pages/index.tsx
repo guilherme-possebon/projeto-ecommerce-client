@@ -1,3 +1,4 @@
+import Featured from '@/componets/Featured'
 import Header from '@/componets/Header'
 import Head from 'next/head'
 
@@ -10,6 +11,7 @@ export default function Home() {
       </Head>
       <div>
         <Header />
+        <Featured />
       </div>
     </>
   )
