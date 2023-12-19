@@ -24,15 +24,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "lib/mongodb.ts",
-    "src/pages/api/products.ts",
-    "src/pages/api/auth/[...nextauth].js",
-    "src/api/auth/[auth0]/route.js",
     "next.config.js",
-    "postcss.config.cjs",
-    "panda.config.ts",
-    "styled-system",
-    "src/Components/ProductForm.tsx"
+    "postcss.config.js",
+    "tailwind.config.js"
   ],
   "exclude": ["node_modules"]
 }

@@ -1,15 +1,8 @@
 import Link from 'next/link'
-import { css } from '../../styled-system/css'
 
 export default function Header() {
-  const StyleHeader = css({
-    bg: '#222',
-    '& a': {
-      color: 'white'
-    }
-  })
   return (
-    <header className={StyleHeader}>
+    <header>
       <Link href={'/'}>Ecommerce</Link>
       <nav>
         <Link href={'/'}>Pagina inicial</Link>
