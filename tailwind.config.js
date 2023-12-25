@@ -10,6 +10,9 @@ module.exports = {
   darkMode: 'media',
   theme: {
     extend: {
+      gridTemplateColumns: {
+        HeaderGrid: 'repeat(1, .8fr 1.2fr)'
+      },
       colors: {
         primary: '#4442f6',
         hightlight: '#eae8fb',
