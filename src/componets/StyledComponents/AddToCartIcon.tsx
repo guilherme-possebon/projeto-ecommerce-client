@@ -6,13 +6,17 @@ interface AddToCartIconProps {
 
 export default function AddToCartIcon({ CartWidth }: AddToCartIconProps) {
   const WidthOfCartConfig: Record<string, string> = {
-    default: 'text-[20px]'
+    XS: 'text-[10px]',
+    S: 'text-[15px]',
+    M: 'text-[20px]',
+    L: 'text-[30px]',
+    XL: 'text-[40px]',
   }
 
   const WidthOfCart: string =
     CartWidth && WidthOfCartConfig[CartWidth]
       ? WidthOfCartConfig[CartWidth]
-      : WidthOfCartConfig.default
+      : WidthOfCartConfig.m
 
   return (
     <>

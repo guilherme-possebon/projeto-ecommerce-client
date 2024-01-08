@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Center from './Center'
 import PrimaryBtn from './StyledComponents/PrimaryBtn'
-import AddToCartIcon from './AddToCartIcon'
+import AddToCartIcon from './StyledComponents/AddToCartIcon'
 
 export default function Featured() {
   return (
@@ -20,7 +20,7 @@ export default function Featured() {
                 <div className="flex gap-2 mt-5">
                   <PrimaryBtn color="transparent">Ler mais</PrimaryBtn>
                   <PrimaryBtn>
-                    <AddToCartIcon CartWidth="15px" />
+                    <AddToCartIcon CartWidth="M" />
                   </PrimaryBtn>
                 </div>
               </div>
@@ -33,7 +33,7 @@ export default function Featured() {
                 alt="a random image"
                 width={500}
                 height={200}
-                objectFit="contain"
+                className='object-contain'
               />
             </div>
           </div>

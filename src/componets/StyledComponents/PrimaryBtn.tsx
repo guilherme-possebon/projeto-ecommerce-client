@@ -6,7 +6,8 @@ interface PrimaryBtnProps {
 
 export default function PrimaryBtn({ children, size, color }: PrimaryBtnProps) {
   const sizeConfig: Record<string, string> = {
-    L: 'text-[1.2rem] py-[10px] px-[20px]'
+    L: 'text-[1.2rem] py-[10px] px-[20px]',
+    SCart: 'p-2'
   }
   const colorConfig: Record<string, string> = {
     default: 'bg-[#5542F6] text-white',
