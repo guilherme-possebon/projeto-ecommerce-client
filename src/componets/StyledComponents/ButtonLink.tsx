@@ -1,10 +1,16 @@
-export interface PrimaryBtnProps {
-  children: React.ReactNode
-  size?: string
-  color?: 'white' | 'transparent'
+import Link from 'next/link'
+import type { PrimaryBtnProps } from './PrimaryBtn'
+
+interface ButtonLinkProps {
+  href: string
 }
 
-export default function PrimaryBtn({ children, size, color }: PrimaryBtnProps) {
+export default function ButtonLink({
+  children,
+  size,
+  color,
+  href
+}: PrimaryBtnProps & ButtonLinkProps) {
   const sizeConfig: Record<string, string> = {
     L: 'text-[1.2rem] py-[10px] px-[20px]',
     SCart: 'p-2'
@@ -23,9 +29,12 @@ export default function PrimaryBtn({ children, size, color }: PrimaryBtnProps) {
 
   return (
     <>
-      <button className={`rounded-md ${colorClassName} ${sizeClassName}`}>
+      <Link
+        href={href}
+        className={`rounded-md ${colorClassName} ${sizeClassName}`}
+      >
         {children}
-      </button>
+      </Link>
     </>
   )
 }
