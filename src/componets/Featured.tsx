@@ -6,7 +6,7 @@ import AddToCartIcon from './StyledComponents/AddToCartIcon'
 import type { HomeProps } from '@/pages'
 import ButtonLink from './StyledComponents/ButtonLink'
 
-export default function Featured({ product }: HomeProps) {
+export default function Featured({ featuredProduct }: HomeProps) {
   return (
     <>
       <div className="bg-[#222] text-white py-[50px]">
@@ -14,13 +14,15 @@ export default function Featured({ product }: HomeProps) {
           <div className="grid grid-cols-HeaderGrid gap-10">
             <div className="flex items-center flex-col">
               <div>
-                <h1 className="text-white text-4xl">{product.title}</h1>
+                <h1 className="text-white text-4xl">
+                  {featuredProduct?.title}
+                </h1>
                 <p className="text-[#aaa] text-[.8rem]">
-                  {product.description}
+                  {featuredProduct?.description}
                 </p>
                 <div className="flex gap-2 mt-5">
                   <ButtonLink
-                    href={'/produtos/' + product._id}
+                    href={'/produtos/' + featuredProduct?._id}
                     color="transparent"
                   >
                     Ler mais

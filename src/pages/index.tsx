@@ -6,9 +6,11 @@ import { mongooseConnect } from '../../lib/mongoose'
 import NewProducts from '@/componets/NewProducts'
 
 export interface HomeProps {
-  product: Record<string, string>
+  featuredProduct?: Record<string, string>
+  newProducts?: Record<string, string>
 }
-export default function Home({ product }: HomeProps) {
+export default function Home({ featuredProduct, newProducts }: HomeProps) {
+  console.log(newProducts, 11)
   return (
     <>
       <Head>
@@ -17,8 +19,8 @@ export default function Home({ product }: HomeProps) {
       </Head>
       <div>
         <Header />
-        <Featured product={product} />
-        <NewProducts />
+        <Featured featuredProduct={featuredProduct} />
+        <NewProducts newProducts={newProducts} />
       </div>
     </>
   )
@@ -27,8 +29,16 @@ export default function Home({ product }: HomeProps) {
 export async function getServerSideProps() {
   const featuredProductId = '6563c929b817b16d8ad51087'
   await mongooseConnect()
-  const product: HomeProps | null = await Product.findById(featuredProductId)
+  const featuredProduct: HomeProps | null =
+    await Product.findById(featuredProductId)
+  const newProducts = await Product.find({}, null, {
+    sort: { _id: -1 },
+    limit: 10
+  })
   return {
-    props: { product: JSON.parse(JSON.stringify(product)) }
+    props: {
+      featuredProduct: JSON.parse(JSON.stringify(featuredProduct)),
+      newProducts: JSON.parse(JSON.stringify(newProducts))
+    }
   }
 }
