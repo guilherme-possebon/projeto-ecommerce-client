@@ -2,15 +2,16 @@ import Featured from '@/componets/Featured'
 import Header from '@/componets/Header'
 import Head from 'next/head'
 import { Product } from '../../models/Product'
+import type { ProductInterface } from '../../models/Product'
 import { mongooseConnect } from '../../lib/mongoose'
 import NewProducts from '@/componets/NewProducts'
 
 export interface HomeProps {
-  featuredProduct?: Record<string, string>
-  newProducts?: Record<string, string>
+  featuredProduct?: ProductInterface | null
+  newProducts?: ProductInterface[] | undefined
 }
 export default function Home({ featuredProduct, newProducts }: HomeProps) {
-  console.log(newProducts, 11)
+  console.log(newProducts)
   return (
     <>
       <Head>

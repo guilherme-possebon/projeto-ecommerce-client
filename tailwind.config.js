@@ -11,7 +11,8 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        HeaderGrid: 'repeat(1, .8fr 1.2fr)'
+        HeaderGrid: 'repeat(1, .8fr 1.2fr)',
+        NewProductsGrid: 'repeat(1, 1fr 1fr 1fr)'
       },
       colors: {
         primary: '#4442f6',

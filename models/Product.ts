@@ -8,6 +8,8 @@ export interface ProductInterface {
   productUrls: string[]
   selectedCategory: string
   productProperties: object
+  createdAt: string
+  updatedAt: string
 }
 
 const ProductShema = new Schema(
