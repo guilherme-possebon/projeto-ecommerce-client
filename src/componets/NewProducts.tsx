@@ -1,15 +1,19 @@
 import type { HomeProps } from '@/pages'
+import Center from './StyledComponents/Center'
+import ProductBox from './ProductBox'
 
 export default function NewProducts({ newProducts }: HomeProps) {
   return (
     <>
-      <div className="grid grid-cols-NewProductsGrid">
-        {newProducts &&
-          newProducts.length > 0 &&
-          newProducts.map((product) => (
-            <div key={product._id}>{product.title}</div>
-          ))}
-      </div>
+      <Center>
+        <div className="grid grid-cols-NewProductsGrid gap-5 pt-5">
+          {newProducts &&
+            newProducts.length > 0 &&
+            newProducts.map((product) => (
+              <ProductBox product={product} key={product._id} />
+            ))}
+        </div>
+      </Center>
     </>
   )
 }

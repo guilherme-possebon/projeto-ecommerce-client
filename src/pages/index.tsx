@@ -9,9 +9,9 @@ import NewProducts from '@/componets/NewProducts'
 export interface HomeProps {
   featuredProduct?: ProductInterface | null
   newProducts?: ProductInterface[] | undefined
+  product?: ProductInterface | undefined
 }
 export default function Home({ featuredProduct, newProducts }: HomeProps) {
-  console.log(newProducts)
   return (
     <>
       <Head>
@@ -28,7 +28,7 @@ export default function Home({ featuredProduct, newProducts }: HomeProps) {
 }
 
 export async function getServerSideProps() {
-  const featuredProductId = '6563c929b817b16d8ad51087'
+  const featuredProductId = '65aadf0e9fb48a0a632bcc4a'
   await mongooseConnect()
   const featuredProduct: HomeProps | null =
     await Product.findById(featuredProductId)

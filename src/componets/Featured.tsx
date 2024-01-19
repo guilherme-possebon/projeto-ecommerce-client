@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Center from './Center'
+import Center from './StyledComponents/Center'
 import PrimaryBtn from './StyledComponents/PrimaryBtn'
 import AddToCartIcon from './StyledComponents/AddToCartIcon'
 
