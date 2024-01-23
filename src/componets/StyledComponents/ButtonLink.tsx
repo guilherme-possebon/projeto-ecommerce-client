@@ -18,7 +18,8 @@ export default function ButtonLink({
   const colorConfig: Record<string, string> = {
     default: 'bg-[#5542F6] text-white',
     white: 'bg-white text-black',
-    transparent: 'bg-transparent text-white border divide-solid border-white'
+    transparent: 'bg-transparent text-white border divide-solid border-white',
+    fullTransparent: 'bg-transparent text-white'
   }
 
   const sizeClassName: string =

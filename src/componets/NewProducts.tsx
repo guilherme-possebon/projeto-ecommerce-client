@@ -1,12 +1,12 @@
 import type { HomeProps } from '@/pages'
 import Center from './StyledComponents/Center'
-import ProductBox from './ProductBox'
+import ProductBox from './StyledComponents/ProductBox'
 
 export default function NewProducts({ newProducts }: HomeProps) {
   return (
     <>
       <Center>
-        <div className="grid grid-cols-NewProductsGrid gap-5 pt-5">
+        <div className="grid grid-cols-NewProductsGrid gap-8 pt-8 ">
           {newProducts &&
             newProducts.length > 0 &&
             newProducts.map((product) => (

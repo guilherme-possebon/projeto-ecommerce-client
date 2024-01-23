@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Center from './StyledComponents/Center'
 import PrimaryBtn from './StyledComponents/PrimaryBtn'
-import AddToCartIcon from './StyledComponents/AddToCartIcon'
+import AddToCartIcon from './StyledComponents/Icons/AddToCartIcon'
 
 import type { HomeProps } from '@/pages'
 import ButtonLink from './StyledComponents/ButtonLink'

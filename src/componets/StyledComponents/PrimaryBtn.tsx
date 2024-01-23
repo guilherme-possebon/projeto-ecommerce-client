@@ -1,7 +1,7 @@
 export interface PrimaryBtnProps {
   children: React.ReactNode
   size?: string
-  color?: 'white' | 'transparent'
+  color?: string
 }
 
 export default function PrimaryBtn({ children, size, color }: PrimaryBtnProps) {
@@ -12,7 +12,10 @@ export default function PrimaryBtn({ children, size, color }: PrimaryBtnProps) {
   const colorConfig: Record<string, string> = {
     default: 'bg-[#5542F6] text-white',
     white: 'bg-white text-black',
-    transparent: 'bg-transparent text-white border divide-solid border-white'
+    transparent: 'bg-transparent text-white border divide-solid border-white',
+    fullTransparent: 'bg-transparent text-white',
+    outline:
+      'bg-transparent border divide-solid border-[#5542F6] text-[#5542F6]'
   }
 
   const sizeClassName: string =

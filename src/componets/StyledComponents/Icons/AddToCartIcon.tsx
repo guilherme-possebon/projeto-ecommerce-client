@@ -10,7 +10,7 @@ export default function AddToCartIcon({ CartWidth }: AddToCartIconProps) {
     S: 'text-[15px]',
     M: 'text-[20px]',
     L: 'text-[30px]',
-    XL: 'text-[40px]',
+    XL: 'text-[40px]'
   }
 
   const WidthOfCart: string =
