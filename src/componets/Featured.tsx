@@ -23,11 +23,12 @@ export default function Featured({ featuredProduct }: HomeProps) {
                 <div className="flex gap-2 mt-5">
                   <ButtonLink
                     href={'/produtos/' + featuredProduct?._id}
-                    color="transparent"
+                    color="black"
+                    hover="BestWithBlack"
                   >
                     Ler mais
                   </ButtonLink>
-                  <PrimaryBtn>
+                  <PrimaryBtn hover="BestWithDefault">
                     <AddToCartIcon CartWidth="M" />
                   </PrimaryBtn>
                 </div>

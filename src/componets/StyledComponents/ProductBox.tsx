@@ -19,7 +19,7 @@ export default function ProductBox({ product }: { product: ProductInterface }) {
             <p>{product.title}</p>
             <div className="flex justify-between">
               <p className="font-bold text-2xl">R${product.price}</p>
-              <PrimaryBtn color="outline">
+              <PrimaryBtn color="outline" hover="BestWithTransparent">
                 <AddToCartIcon />
               </PrimaryBtn>
             </div>
@@ -29,6 +29,7 @@ export default function ProductBox({ product }: { product: ProductInterface }) {
     </>
   )
 }
+// TODO Possivelmente adicionar futuramente o botão de favorito "<3"
 // import HeartIcon from './Icons/Hearticon'
 // import PrimaryBtn from './PrimaryBtn'
 // export default function ProductBox({ product }: { product: ProductInterface }) {
